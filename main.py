@@ -1,3 +1,6 @@
+def main():
+    pass
+
 def bubble_sort(my_list):
     n = len(my_list)
     swapped_count = 0
@@ -13,14 +16,24 @@ def bubble_sort(my_list):
                 swapped = True
                 swapped_count += 1
 
-
         if not swapped:
             break
 
     return swapped_count, compared_count
 
+def selection_sort(my_list):
+    n = len(my_list)
+
+    for i in range(n):
+        min_idx = i
+        for j in range(i+1, n):
+            if my_list[min_idx] > my_list[j]:
+                min_idx = j
+
+        my_list[i], my_list[min_idx] = my_list[min_idx], my_list[i]
+
 
 
 if __name__ == '__main__':
-    pass
+    main()
 
